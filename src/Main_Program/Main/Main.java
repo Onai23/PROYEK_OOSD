@@ -2,10 +2,7 @@ package Main_Program.Main;
 
 import Main_Program.Driver.DataDokterDriver;
 import Main_Program.Driver.DataPerawatDriver;
-import Main_Program.Kelas.Fasilitas;
-import Main_Program.Kelas.JadwalHariKerja;
-import Main_Program.Kelas.JadwalKlinik;
-import Main_Program.Kelas.SyaratMasukKlinik;
+import Main_Program.Kelas.*;
 
 import java.util.Scanner;
 
@@ -64,9 +61,16 @@ public class Main {
                 System.out.println("BERIKUT FASILITAS YANG TERSEDIA DI KLINIK IT DEL : " );
                 fasilitas.displayFasilitas();
             } else if(stored_input == 6) {
+                /*11. instansiasi kelas SyaratMasukKlinik*/
                 SyaratMasukKlinik syaratMasukKlinik = new SyaratMasukKlinik();
                 System.out.println("BERIKUT SYARAT MASUK KE KLINIK IT DEL : ");
                 syaratMasukKlinik.displaySyaratMasukKlinik();
+            } else if(stored_input == 7){
+                /*12. Instansiasi kelas TataCaraPembayaran*/
+                TataCaraPembayaran tataCaraPembayaran = new TataCaraPembayaran();
+                System.out.println("=====================================");
+                tataCaraPembayaran.displayTataCaraPembayaran();
+                System.out.println("=====================================");
             } else if (stored_input == 11) {
                 System.out.println("Apakah Anda ingin keluar dari aplikasi ?  : (yes/no)");
                 String opsi = input_pengunjung.next();
