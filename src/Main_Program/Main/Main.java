@@ -22,11 +22,9 @@ public class Main {
             System.out.println("4. Data Perawat");
             System.out.println("5. Fasilitas");
             System.out.println("6. Syarat mengunjungi klinik");
-            System.out.println("7. Tata Cara Pembayaran");
-            System.out.println("8. Kontak yang dihubungi");
-            System.out.println("9. Tentang klinik");
-            System.out.println("10. Detail pembayaran");
-            System.out.println("11. Keluar");
+            System.out.println("7. Opsi Pembayaran");
+            System.out.println("8. Tentang klinik");
+            System.out.println("9. Keluar");
 
             /*3. MEMINTA PENGUNJUNG MEMASUKKAN INPUT DATA*/
             System.out.print("\nMasukkan angka untuk melihat detail informasi : ");
@@ -71,7 +69,7 @@ public class Main {
                 System.out.println("=====================================");
                 tataCaraPembayaran.displayTataCaraPembayaran();
                 System.out.println("=====================================");
-            } else if (stored_input == 11) {
+            } else if (stored_input == 10) {
                 System.out.println("Apakah Anda ingin keluar dari aplikasi ?  : (yes/no)");
                 String opsi = input_pengunjung.next();
                 if(opsi.equals("yes")) {
