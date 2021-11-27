@@ -21,7 +21,5 @@ public interface GetAllMethod {
     default void displaySyaratMasukKlinik() {
         System.out.println("This method displaySyaratMasukKlinik()");
     }
-    default void displayTataCaraPembayaran() {
-        System.out.println("This method displayTataCaraPembayaran()");
-    }
+
 }

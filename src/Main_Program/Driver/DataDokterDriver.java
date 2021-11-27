@@ -1,5 +1,6 @@
 package Main_Program.Driver;
 
+import Main_Program.Enum.Gender;
 import Main_Program.Kelas.DataDokter;
 import Main_Program.Interface.GetAllMethod;
 
@@ -29,7 +30,7 @@ public class DataDokterDriver implements GetAllMethod {
 
         dataDokter.setNama("Rizki Situmorang");
         dataDokter.setNID("1142003");
-        dataDokter.setJenisKelamin("Laki-laki");
+        dataDokter.setJenisKelamin(Gender.LAKI_LAKI.toString());
         dataDokter.setTanggalLahir("2002");
         String nama_dokter_III = dataDokter.getNama();
         String nid_dokter_III = dataDokter.getNID();

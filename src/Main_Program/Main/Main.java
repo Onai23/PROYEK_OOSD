@@ -4,6 +4,7 @@ import Main_Program.Driver.DataDokterDriver;
 import Main_Program.Driver.DataPerawatDriver;
 import Main_Program.Kelas.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -65,11 +66,11 @@ public class Main {
                 syaratMasukKlinik.displaySyaratMasukKlinik();
             } else if(stored_input == 7){
                 /*12. Instansiasi kelas TataCaraPembayaran*/
-                TataCaraPembayaran tataCaraPembayaran = new TataCaraPembayaran();
+                TataCaraPembayaranDriver tataCaraPembayaranDriver = new TataCaraPembayaranDriver();
                 System.out.println("=====================================");
-                tataCaraPembayaran.displayTataCaraPembayaran();
+                tataCaraPembayaranDriver.displayTataCaraPembayaran();
                 System.out.println("=====================================");
-            } else if (stored_input == 10) {
+            } else if (stored_input == 9) {
                 System.out.println("Apakah Anda ingin keluar dari aplikasi ?  : (yes/no)");
                 String opsi = input_pengunjung.next();
                 if(opsi.equals("yes")) {
@@ -82,5 +83,25 @@ public class Main {
             }
 
         }
+    }
+}
+
+
+abstract class TataCaraPembayaran {
+    abstract void displayTataCaraPembayaran();
+}
+
+ class TataCaraPembayaranDriver extends TataCaraPembayaran{
+    @Override
+    public void displayTataCaraPembayaran() {
+        /*1. instansiasi kelas ArrayList*/
+        ArrayList<String> tataCara = new ArrayList<>();
+
+        /*2. assign value ke objek tataCara*/
+        tataCara.add("PEMBAYARAN DILAKUKAN DI TEMPAT.");
+        tataCara.add("PEMBAYARAN DILAKUKAN MELALUI BANK.");
+
+        int i = 0;
+        System.out.println(tataCara.get(i));
     }
 }
