@@ -1,5 +1,6 @@
 package Main_Program.Main;
 
+import Main_Program.Abstract.DisplayPemesanan;
 import Main_Program.Driver.DataDokterDriver;
 import Main_Program.Driver.DataPerawatDriver;
 import Main_Program.Kelas.*;
@@ -24,8 +25,9 @@ public class Main {
             System.out.println("5. Fasilitas");
             System.out.println("6. Syarat mengunjungi klinik");
             System.out.println("7. Opsi Pembayaran");
-            System.out.println("8. Tentang klinik");
-            System.out.println("9. Keluar");
+            System.out.println("8. Pemesanan");
+            System.out.println("9. Tentang klinik");
+            System.out.println("10. Keluar");
 
             /*3. MEMINTA PENGUNJUNG MEMASUKKAN INPUT DATA*/
             System.out.print("\nMasukkan angka untuk melihat detail informasi : ");
@@ -60,17 +62,46 @@ public class Main {
                 System.out.println("BERIKUT FASILITAS YANG TERSEDIA DI KLINIK IT DEL : " );
                 fasilitas.displayFasilitas();
             } else if(stored_input == 6) {
+                System.out.println("Pilihan Anda adalah  : " + stored_input + ". Syarat Mengunjungi Klinik");
                 /*11. instansiasi kelas SyaratMasukKlinik*/
                 SyaratMasukKlinik syaratMasukKlinik = new SyaratMasukKlinik();
                 System.out.println("BERIKUT SYARAT MASUK KE KLINIK IT DEL : ");
                 syaratMasukKlinik.displaySyaratMasukKlinik();
             } else if(stored_input == 7){
+                System.out.println("Pilihan Anda adalah  : " + stored_input + ". Opsi Pembayaran");
                 /*12. Instansiasi kelas TataCaraPembayaran*/
                 TataCaraPembayaranDriver tataCaraPembayaranDriver = new TataCaraPembayaranDriver();
                 System.out.println("=====================================");
                 tataCaraPembayaranDriver.displayTataCaraPembayaran();
                 System.out.println("=====================================");
-            } else if (stored_input == 9) {
+            } else if (stored_input == 8){
+                String nama;
+                String alamat;
+                String umur;
+                String noTel;
+                String jk;
+
+                System.out.println("Pilihan Anda adalah  : " + stored_input + ". Pemesanan");
+                System.out.println("======================");
+                System.out.println("Nama                 : ");
+                nama = String.valueOf(new Scanner(System.in).nextLine());
+                System.out.println("Alamat               : ");
+                alamat = String.valueOf(new Scanner(System.in).nextLine());
+                System.out.println("Umur(Tahun)          : ");
+                umur = String.valueOf(new Scanner(System.in).nextLine());
+                System.out.println("Nomor Telepon        : ");
+                noTel = String.valueOf(new Scanner(System.in).nextLine());
+                System.out.println("Jenis Kelamin        : ");
+                jk = String.valueOf(new Scanner(System.in).nextLine());
+                /*13. instansiasi kelas DisplayPemesanan*/
+                DisplayPemesanan displayPemesanan = new DisplayPemesanan(nama, alamat, umur, noTel, jk);
+                displayPemesanan.displayData();
+                displayPemesanan.displayJadwalPemesanan();
+
+            } else if(stored_input == 9) {
+                System.out.println("Pilihan Anda adalah  : " + stored_input + ". Tentang Klinik");
+                System.out.println("KLINIK IT DEL INI SEKARANG DIBUKA UNTUK UMUM.");
+            } else if (stored_input == 10) {
                 System.out.println("Apakah Anda ingin keluar dari aplikasi ?  : (yes/no)");
                 String opsi = input_pengunjung.next();
                 if(opsi.equals("yes")) {
