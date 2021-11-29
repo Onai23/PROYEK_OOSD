@@ -1,6 +1,8 @@
 package Main_Program.Login_and_Register;
 
 
+import Main_Program.Main.Main;
+
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
@@ -57,7 +59,7 @@ public class Authentication {
                     }
                     break;
                 }
-                content.close();
+                //content.close();
             }
             if (flag == 0) {
                 try {
@@ -76,7 +78,7 @@ public class Authentication {
             System.out.println("1. Registration.");
             System.out.println("2. Login");
 
-            System.out.println("Enter your choice");
+            System.out.println("Enter your choice : ");
             int choice = input.nextInt();
             if (choice == 1) {
                 this.register();
@@ -86,7 +88,7 @@ public class Authentication {
                 System.out.println("Choose proper Option..");
             }
         }
-        input.close();
+        //input.close();
     }
 
     /*create method login()*/
@@ -94,11 +96,11 @@ public class Authentication {
         /*instansiasi kelas Scanner*/
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter username : ");
+        System.out.print("Enter username   : ");
         String userName = input.nextLine();
         System.out.println(userName);
 
-        System.out.println("Enter password");
+        System.out.println("Enter password :");
         String passWord = input.nextLine();
         System.out.println(passWord);
         userName = userName.trim();
@@ -118,6 +120,10 @@ public class Authentication {
                     System.out.println("|| Login Successfully         ||");
                     System.out.println("|| welcome to the application ||");
                     System.out.println("|| ========================== ||");
+
+                    //instansiasi kelas Main
+                     Main main = new Main();
+                     main.displayMain();
 
                     //re-assign variable flag
                     flag = 1;
@@ -139,12 +145,12 @@ public class Authentication {
                     System.out.println("Choose proper option.");
                 }
             }
-            content.close();
+            //content.close();
         } catch (FileNotFoundException error) {
             System.out.println("Error.");
             error.printStackTrace();
         }
-        input.close();
+        //input.close();
     }
 
 }

@@ -11,7 +11,9 @@ public class AuthenticationDriver {
         try {
             File obj = new File("data.txt");
             if (obj.createNewFile()) {
-                System.out.println("File ise created");
+                System.out.println("=====================");
+                System.out.println("|| File is created || ");
+                System.out.println("=====================");
             }
         } catch (IOException error) {
             System.out.println("An error occured" );
@@ -22,7 +24,7 @@ public class AuthenticationDriver {
         System.out.println("1. Registration. ");
         System.out.println("2. Login");
 
-        System.out.println("Enter your choice");
+        System.out.println("Enter your choice : ");
         choice = input.nextInt();
         input.nextLine();
 

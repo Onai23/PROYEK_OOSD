@@ -10,7 +10,7 @@ public class DataDokter {
     /*2. set constructor no parameter*/
     public DataDokter() {}
     /*3. set constructor with parameter*/
-    DataDokter(String nama, String NID, String jenisKelamin, String tanggalLahir) {
+    public DataDokter(String nama, String NID, String jenisKelamin, String tanggalLahir) {
         this.nama = nama;
         this.NID = NID;
         this.jenisKelamin = jenisKelamin;
